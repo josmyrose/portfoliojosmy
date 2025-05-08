@@ -151,6 +151,31 @@
             padding: 4px 0;
             color: #333;
         }
+        /* Project Highlights */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 3px solid #4b6cb7;
+        }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .project-card h3 {
+                color: #182848;
+                margin-bottom: 10px;
+            }
     
     </style>
 </head>
@@ -167,8 +192,9 @@
     <div class="main-content">
 
         <button class="btn-toggle" onclick="toggleAbout()">About</button>
-        <button class="btn-toggle" onclick="toggleSkills()">Technical Skills</button>
         <button class="btn-toggle" onclick="toggleexperiences()">Experience</button>
+        <button class="btn-toggle" onclick="toggleSkills()">Technical Skills</button>
+
         <button class="btn-toggle" onclick="toggleprojects()">Projects</button>
         <section id="about1">
             <section id="about">
@@ -268,34 +294,43 @@
             </div>
         </section>
         <section id="projects" class="projects-section">
-            <h2>💼 Projects</h2>
+            
 
-            <div class="project-item">
-                <h3>Healthcare Policy Impact Analysis Dashboard</h3>
-                <p>
-                    Used ML (Logistic Regression, XGBoost) and causal inference (DID, PSM) to analyze healthcare-seeking behavior.
-                    Deployed an interactive policy simulation dashboard using Flask and Dash.
-                </p>
-                <a href="https://freecaredashboard-production.up.railway.app/" target="_blank">View Project</a>
+            
+            <!-- Project Highlights -->
+            <h2 class="section-title">💼 Key Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Healthcare Policy Impact Analysis Dashboard</h3>
+                    <p><strong>Technologies:</strong> Python, Scikit-learn</p>
+                    <p>Used ML (Logistic Regression, XGBoost) and causal inference (DID, PSM) to analyze healthcare-seeking behavior.</p>
+                    <a href="https://freecaredashboard-production.up.railway.app/" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Social Media User Profiling Tool</h3>
+                    <p><strong>Technologies:</strong> Python,Scikit-learn</p>
+                    <p>Developed a real-time profile analysis dashboard with user authentication.</p>
+                    <p>Integrated a Random Forest model to classify social media user types based on behavioral features.</p>
+                    <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Manufacturing Defect Prediction</h3>
+                    <p><strong>Technologies:</strong> Python,Scikit-learn</p>
+                    <p>Developed a real-time profile analysis dashboard with user authentication.</p>
+                    <p>Integrated a Random Forest model to classify social media user types based on behavioral features.</p>
+                    <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
+                </div>
             </div>
+                
 
-            <div class="project-item">
-                <h3>Social Media User Profiling Tool</h3>
-                <p>
-                    Developed a real-time profile analysis dashboard with user authentication.
-                    Integrated a Random Forest model to classify social media user types based on behavioral features.
-                </p>
-                <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
-            </div>
-
-            <div class="project-item">
-                <h3>Manufacturing Defect Prediction</h3>
-                <p>
-                    Built ML pipelines to predict defects in manufacturing using pandas and scikit-learn.
-                    Delivered actionable insights via a Streamlit app to improve production quality.
-                </p>
-                <a href="https://your-defect-prediction-app.com" target="_blank">View Project</a>
-            </div>
+                <div class="project-item">
+                    <h3>Manufacturing Defect Prediction</h3>
+                    <p>
+                        
+                        Delivered actionable insights via a Streamlit app to improve production quality.
+                    </p>
+                    <a href="https://your-defect-prediction-app.com" target="_blank">View Project</a>
+                </div>
         </section>
 
         <script>
@@ -310,7 +345,7 @@
             function toggleexperiences() {
                 const section = document.getElementById('experience');
                 section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-            } 
+            }
             function toggleprojects() {
                 const section = document.getElementById('projects');
                 section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
