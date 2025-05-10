@@ -12,10 +12,13 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             background-color: #f0f7fa;
+            margin: 0;
+            padding: 0;
         }
+
 
         .sidebar {
             position: fixed;
@@ -107,11 +110,7 @@
                 padding-left: 20px;
             }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 2rem;
-            background-color: #f9f9f9;
-        }
+       
 
         .btn-toggle {
             background-color: #2e86de;
@@ -176,6 +175,76 @@
                 color: #182848;
                 margin-bottom: 10px;
             }
+        .teaching-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .experience-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .experience-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+            .experience-header h3 {
+                color: #3498db;
+                margin-bottom: 5px;
+            }
+
+        .institution, .duration {
+            color: #7f8c8d;
+            margin: 5px 0;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .achievement-category h5 {
+            color: #2c3e50;
+            border-left: 3px solid #3498db;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-category ul {
+            padding-left: 20px;
+        }
+
+        .achievement-category li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
     
     </style>
 </head>
@@ -196,7 +265,8 @@
         <button class="btn-toggle" onclick="toggleSkills()">Technical Skills</button>
 
         <button class="btn-toggle" onclick="toggleprojects()">Projects</button>
-        <section id="about1">
+        <button class="btn-toggle" onclick="toggleCertifications()">Publications & Certifications</button>
+        <section id="about1" style="display: block;">
             <section id="about">
                 <h2>Professional Profile</h2>
                 <p>I am <strong>Josmy Mathew</strong>, a passionate Data Science professional with expertise in transforming complex data into actionable insights. With 15+ years of combined experience in IT mentoring and cutting-edge data analysis, I bridge the gap between technical implementation and business strategy.</p>
@@ -223,6 +293,7 @@
             </div>
         </section>
         <div class="skills-section" id="skillsSection">
+            <h2>🛠️ Technical Skills</h2> <!-- Add this heading -->
             <h3>Programming & Scripting</h3>
             <ul>
                 <li>Python (NumPy, Pandas, Scikit-learn)</li>
@@ -260,10 +331,21 @@
                 <li>Regression, PSM, DiD</li>
             </ul>
         </div>
-        <section id="experience" class="experience-section">
+        <section id="experience" class="experience-section" style="display: none;">
             <h2>🧠 Experience</h2>
+            <div class="experience-card">
+                <h3>Data Scientist | Intern</h3>
+                <p><em>RP2 - Rounded Professional Program 2025 - Present</em></p>
 
-            <div class="experience-item">
+                <ul>
+                    <li>Built ML models (Logistic Regression, XGBoost, Decision Trees) to evaluate healthcare policy impacts.</li>
+                    <li>Applied causal inference techniques (DID, PSM) to measure real-world effects of removing user fees.</li>
+                    <li>Deployed interactive dashboards using Flask and Dash for policy simulation and decision support.</li>
+                </ul>
+            </div>
+
+
+            <div class="experience-card">
                 <h3>Data Scientist | Volunteer</h3>
                 <p><em>Remote · 2023 – Present</em></p>
                 <ul>
@@ -274,18 +356,55 @@
             </div>
 
             <div class="experience-item">
-                <h3>Senior Assistant Professor | AI & Data Science</h3>
-                <p><em>India · 2016 – 2022</em></p>
-                <ul>
-                    <li>Taught 500+ students in Data Science, Machine Learning, and Web Technologies.</li>
-                    <li>Designed and led academic projects involving NLP, computer vision, and data analysis.</li>
-                    <li>Mentored students for research publications and tech competitions.</li>
-                </ul>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Senior Assistant Professor | AI & Data Science</h3>
+                        <p><em>Saintgits College of Engineering,India,2010 – 2022</em></p>
+                    </div>
+
+                    <div class="experience-content">
+                        <h4>Key Responsibilities & Achievements</h4>
+                        <div class="achievements-grid">
+
+                            <div class="achievement-category">
+                                <h5>Teaching & Pedagogy</h5>
+                                <ul>
+                                    <li>Delivered <strong>industry-aligned courses</strong> in Machine Learning, Data Science, Web Technologies, and NLP to <strong>500+ students</strong></li>
+                                    <li>Designed <strong>30+ real-world projects</strong> including predictive analytics for local businesses and CV-based attendance systems</li>
+                                    <li>Integrated <strong>Kaggle competitions, Hackathons, and GitHub portfolios</strong> into curriculum</li>
+                                    <li>Maintained <strong>90%+ student satisfaction</strong> while teaching 4+ subjects per semester</li>
+                                </ul>
+                            </div>
+
+                            <div class="achievement-category">
+                                <h5>NBA Accreditation Leadership</h5>
+                                <ul>
+                                    <li>Key contributor to <strong>NBA accreditation</strong> for Computer Science department</li>
+                                    <li>Redesigned <strong>12 course syllabi</strong> to meet Outcome-Based Education (OBE) standards</li>
+                                    <li>Prepared <strong>500+ pages of documentation</strong> including course files and outcome metrics</li>
+                                    <li>Led <strong>5+ mock audits</strong> and trained faculty on NBA processes</li>
+                                </ul>
+                            </div>
+
+                            <div class="achievement-category">
+                                <h5>Research & Mentorship</h5>
+                                <ul>
+                                    <li>Guided <strong>15+ student research teams</strong> to publish in IEEE/Springer conferences</li>
+                                    <li>Mentored students to win <strong>national competitions</strong> (Smart India Hackathon)</li>
+                                    <li>Partnered with <strong>TCS, Infosys</strong> for guest lectures and internships</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="experience-item">
-                <h3>Data Science Intern</h3>
-                <p><em>Germany · 2023</em></p>
+            <div class="experience-card">
+                <h3>Lecturer</h3>
+                <p><em>Saintgits College of Engineering,India,2008 - 2010</em></p>
+
                 <ul>
                     <li>Conducted EDA and predictive modeling on manufacturing defect data.</li>
                     <li>Built a pipeline using pandas, scikit-learn, and deployed results via Streamlit.</li>
@@ -293,12 +412,12 @@
                 </ul>
             </div>
         </section>
-        <section id="projects" class="projects-section">
-            
+        <section id="projects" class="projects-section" style="display: none;">
 
-            
+
+
             <!-- Project Highlights -->
-            <h2 class="section-title">💼 Key Projects</h2>
+            <h2>💼 Key Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <h3>Healthcare Policy Impact Analysis Dashboard</h3>
@@ -321,37 +440,76 @@
                     <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
                 </div>
             </div>
-                
+    
 
-                <div class="project-item">
-                    <h3>Manufacturing Defect Prediction</h3>
-                    <p>
-                        
-                        Delivered actionable insights via a Streamlit app to improve production quality.
-                    </p>
-                    <a href="https://your-defect-prediction-app.com" target="_blank">View Project</a>
-                </div>
-        </section>
+            <div class="project-item">
+                <h3>Manufacturing Defect Prediction</h3>
+                <p>
 
-        <script>
-            function toggleAbout() {
-                const section = document.getElementById('about1');
-                section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-            }
-            function toggleSkills() {
-                const section = document.getElementById('skillsSection');
-                section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-            }
-            function toggleexperiences() {
-                const section = document.getElementById('experience');
-                section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-            }
-            function toggleprojects() {
-                const section = document.getElementById('projects');
-                section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
-            }
-        </script>
-    </div>
+                    Delivered actionable insights via a Streamlit app to improve production quality.
+                </p>
+                <a href="https://your-defect-prediction-app.com" target="_blank">View Project</a>
+            </div>
+            </section>
+            <section id="Certi" style="display: none;">
+                <section id="about">
+                    <h3>Research Publications</h3>
+                    <ul>
+                        <li>
+                            <strong>Title</strong> | Conference/Journal | Year
+                            <a href="#" class="badge">PDF</a>
+                            <a href="#" class="badge">DOI</a>
+                        </li>
+                        <!-- Repeat for each paper -->
+                    </ul>
+
+                    <div id="certs" class="tab-content">
+                        <h3>Professional Certifications</h3>
+                        <div class="cert-grid">
+                            <div class="cert-card">
+                                <h4>Google Cloud AI Certification</h4>
+                                <p>Issued: 2022 | Credential ID: XYZ123</p>
+                                <a href="#" class="btn-verify">Verify</a>
+                            </div>
+                            <!-- Repeat for each cert -->
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <script>
+                function hideAllSections() {
+                    document.getElementById('about1').style.display = 'none';
+                    document.getElementById('skillsSection').style.display = 'none';
+                    document.getElementById('experience').style.display = 'none';
+                    document.getElementById('projects').style.display = 'none';
+                    document.getElementById('Certi').style.display = 'none';
+                }
+                function toggleAbout() {
+                    hideAllSections();
+                    document.getElementById('about1').style.display = 'block';
+                }
+
+                function toggleSkills() {
+                    hideAllSections();
+                    document.getElementById('skillsSection').style.display = 'block';
+                }
+
+                function toggleexperiences() {
+                    hideAllSections();
+                    document.getElementById('experience').style.display = 'block';
+                }
+
+                function toggleprojects() {
+                    hideAllSections();
+                    document.getElementById('projects').style.display = 'block';
+                }
+                function toggleCertifications() {
+                    hideAllSections();
+                    document.getElementById('Certi').style.display = 'block';
+                }
+            </script>
+</div>
  
 </body>
 </html>
