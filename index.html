@@ -244,7 +244,18 @@
                 grid-template-columns: 1fr;
             }
         }
-
+        .cert-description {
+            margin: 10px 0;
+            color: #555;
+        }
+        .cert-container h2 {
+            color: #333;
+        }
+        .toggle-link {
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     
     </style>
 </head>
@@ -261,6 +272,7 @@
     <div class="main-content">
 
         <button class="btn-toggle" onclick="toggleAbout()">About</button>
+        <button class="btn-toggle" onclick="toggleeducation()">Education</button>
         <button class="btn-toggle" onclick="toggleexperiences()">Experience</button>
         <button class="btn-toggle" onclick="toggleSkills()">Technical Skills</button>
 
@@ -331,184 +343,252 @@
                 <li>Regression, PSM, DiD</li>
             </ul>
         </div>
-        <section id="experience" class="experience-section" style="display: none;">
-            <h2>🧠 Experience</h2>
-            <div class="experience-card">
-                <h3>Data Scientist | Intern</h3>
-                <p><em>RP2 - Rounded Professional Program 2025 - Present</em></p>
-
+        <section id="Edu" style="display: none;">
+            <h2>🎓 Education</h2>
+            <div>
+                <h3>MSc in Data Science, AI & Digital Business</h3>
+                <p>
+                    <strong>GISMA University of Applied Sciences, Germany</strong><br>
+                    Graduation: 2023
+                </p>
                 <ul>
-                    <li>Built ML models (Logistic Regression, XGBoost, Decision Trees) to evaluate healthcare policy impacts.</li>
-                    <li>Applied causal inference techniques (DID, PSM) to measure real-world effects of removing user fees.</li>
-                    <li>Deployed interactive dashboards using Flask and Dash for policy simulation and decision support.</li>
+                    <li><strong>Thesis:</strong>Application of machine learning to predict diabetics</li>
+                    <li><strong>Key Coursework:</strong> Machine Learning, AI & Ethics, Data Engineering, Business Intelligence</li>
+                    
                 </ul>
             </div>
 
-
-            <div class="experience-card">
-                <h3>Data Scientist | Volunteer</h3>
-                <p><em>Remote · 2023 – Present</em></p>
+            <div>
+                <h3>Master of Computer Applications</h3>
+                <p>
+                    <strong>MG University, India</strong><br>
+                   
+                </p>
                 <ul>
-                    <li>Built ML models (Logistic Regression, XGBoost, Decision Trees) to evaluate healthcare policy impacts.</li>
-                    <li>Applied causal inference techniques (DID, PSM) to measure real-world effects of removing user fees.</li>
-                    <li>Deployed interactive dashboards using Flask and Dash for policy simulation and decision support.</li>
+                    
+                    <li><strong>Key Coursework:</strong> Advanced Algorithms, Distributed Systems, Software Engineering,Cloud Computing </li>
                 </ul>
             </div>
 
-            <div class="experience-item">
-
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>Senior Assistant Professor | AI & Data Science</h3>
-                        <p><em>Saintgits College of Engineering,India,2010 – 2022</em></p>
-                    </div>
-
-                    <div class="experience-content">
-                        <h4>Key Responsibilities & Achievements</h4>
-                        <div class="achievements-grid">
-
-                            <div class="achievement-category">
-                                <h5>Teaching & Pedagogy</h5>
-                                <ul>
-                                    <li>Delivered <strong>industry-aligned courses</strong> in Machine Learning, Data Science, Web Technologies, and NLP to <strong>500+ students</strong></li>
-                                    <li>Designed <strong>30+ real-world projects</strong> including predictive analytics for local businesses and CV-based attendance systems</li>
-                                    <li>Integrated <strong>Kaggle competitions, Hackathons, and GitHub portfolios</strong> into curriculum</li>
-                                    <li>Maintained <strong>90%+ student satisfaction</strong> while teaching 4+ subjects per semester</li>
-                                </ul>
-                            </div>
-
-                            <div class="achievement-category">
-                                <h5>NBA Accreditation Leadership</h5>
-                                <ul>
-                                    <li>Key contributor to <strong>NBA accreditation</strong> for Computer Science department</li>
-                                    <li>Redesigned <strong>12 course syllabi</strong> to meet Outcome-Based Education (OBE) standards</li>
-                                    <li>Prepared <strong>500+ pages of documentation</strong> including course files and outcome metrics</li>
-                                    <li>Led <strong>5+ mock audits</strong> and trained faculty on NBA processes</li>
-                                </ul>
-                            </div>
-
-                            <div class="achievement-category">
-                                <h5>Research & Mentorship</h5>
-                                <ul>
-                                    <li>Guided <strong>15+ student research teams</strong> to publish in IEEE/Springer conferences</li>
-                                    <li>Mentored students to win <strong>national competitions</strong> (Smart India Hackathon)</li>
-                                    <li>Partnered with <strong>TCS, Infosys</strong> for guest lectures and internships</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experience-card">
-                <h3>Lecturer</h3>
-                <p><em>Saintgits College of Engineering,India,2008 - 2010</em></p>
-
+            <div>
+                <h3>Bachelor of Computer Applications</h3>
+                <p>
+                    <strong>Cochin University of Applied Sciences,India</strong><br>
+                    
+                </p>
                 <ul>
-                    <li>Conducted EDA and predictive modeling on manufacturing defect data.</li>
-                    <li>Built a pipeline using pandas, scikit-learn, and deployed results via Streamlit.</li>
-                    <li>Collaborated cross-functionally to integrate insights into operational decisions.</li>
+                    
+                    <li><strong>Key Coursework:</strong> Data Structures, Databases, Operating Systems, Computer Networks</li>
                 </ul>
             </div>
+
         </section>
-        <section id="projects" class="projects-section" style="display: none;">
+    <section id="experience" class="experience-section" style="display: none;">
+        <h2>🧠 Experience</h2>
+        <div class="experience-card">
+            <h3>Data Scientist | Intern</h3>
+            <p><em>RP2 - Rounded Professional Program 2025 - Present</em></p>
+
+            <ul>
+                <li>Built ML models (Logistic Regression, XGBoost, Decision Trees) to evaluate healthcare policy impacts.</li>
+                <li>Applied causal inference techniques (DID, PSM) to measure real-world effects of removing user fees.</li>
+                <li>Deployed interactive dashboards using Flask and Dash for policy simulation and decision support.</li>
+            </ul>
+        </div>
 
 
+        <div class="experience-card">
+            <h3>Data Scientist | Volunteer</h3>
+            <p><em>Remote · 2023 – Present</em></p>
+            <ul>
+                <li>Built ML models (Logistic Regression, XGBoost, Decision Trees) to evaluate healthcare policy impacts.</li>
+                <li>Applied causal inference techniques (DID, PSM) to measure real-world effects of removing user fees.</li>
+                <li>Deployed interactive dashboards using Flask and Dash for policy simulation and decision support.</li>
+            </ul>
+        </div>
 
-            <!-- Project Highlights -->
-            <h2>💼 Key Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Healthcare Policy Impact Analysis Dashboard</h3>
-                    <p><strong>Technologies:</strong> Python, Scikit-learn</p>
-                    <p>Used ML (Logistic Regression, XGBoost) and causal inference (DID, PSM) to analyze healthcare-seeking behavior.</p>
-                    <a href="https://freecaredashboard-production.up.railway.app/" target="_blank">View Project</a>
+        <div class="experience-item">
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Senior Assistant Professor</h3>
+                    <p><em>Saintgits College of Engineering,India,2010 – 2022</em></p>
                 </div>
-                <div class="project-card">
-                    <h3>Social Media User Profiling Tool</h3>
-                    <p><strong>Technologies:</strong> Python,Scikit-learn</p>
-                    <p>Developed a real-time profile analysis dashboard with user authentication.</p>
-                    <p>Integrated a Random Forest model to classify social media user types based on behavioral features.</p>
-                    <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Manufacturing Defect Prediction</h3>
-                    <p><strong>Technologies:</strong> Python,Scikit-learn</p>
-                    <p>Developed a real-time profile analysis dashboard with user authentication.</p>
-                    <p>Integrated a Random Forest model to classify social media user types based on behavioral features.</p>
-                    <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
+
+                <div class="experience-content">
+                    <h4>Key Responsibilities & Achievements</h4>
+                    <div class="achievements-grid">
+
+                        <div class="achievement-category">
+                            <h5>Teaching & Pedagogy</h5>
+                            <ul>
+                                <li>Delivered <strong>industry-aligned courses</strong> in Machine Learning, Data Science, Web Technologies, and NLP to <strong>500+ students</strong></li>
+                                <li>Designed <strong>30+ real-world projects</strong> including predictive analytics for local businesses and CV-based attendance systems</li>
+                                <li>Integrated <strong>Kaggle competitions, Hackathons, and GitHub portfolios</strong> into curriculum</li>
+                                <li>Maintained <strong>90%+ student satisfaction</strong> while teaching 4+ subjects per semester</li>
+                            </ul>
+                        </div>
+
+                        <div class="achievement-category">
+                            <h5>NBA Accreditation Leadership</h5>
+                            <ul>
+                                <li>Key contributor to <strong>NBA accreditation</strong> for Computer Science department</li>
+                                <li>Redesigned <strong>12 course syllabi</strong> to meet Outcome-Based Education (OBE) standards</li>
+                                <li>Prepared <strong>500+ pages of documentation</strong> including course files and outcome metrics</li>
+                                <li>Led <strong>5+ mock audits</strong> and trained faculty on NBA processes</li>
+                            </ul>
+                        </div>
+
+                        <div class="achievement-category">
+                            <h5>Research & Mentorship</h5>
+                            <ul>
+                                <li>Guided <strong>15+ student research teams</strong> to publish in IEEE/Springer conferences</li>
+                                <li>Mentored students to win <strong>national competitions</strong> (Smart India Hackathon)</li>
+                                <li>Partnered with <strong>TCS, Infosys</strong> for guest lectures and internships</li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="experience-card">
+            <h3>Lecturer</h3>
+            <p><em>Saintgits College of Engineering,India,2008 - 2010</em></p>
+
+            <ul>
+                <li>Conducted EDA and predictive modeling on manufacturing defect data.</li>
+                <li>Built a pipeline using pandas, scikit-learn, and deployed results via Streamlit.</li>
+                <li>Collaborated cross-functionally to integrate insights into operational decisions.</li>
+            </ul>
+        </div>
+    </section>
+    <section id="projects" class="projects-section" style="display: none;">
+
+
+
+        <!-- Project Highlights -->
+        <h2>💼 Key Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Healthcare Policy Impact Analysis Dashboard</h3>
+                <p><strong>Technologies:</strong> Python, Scikit-learn</p>
+                <p>Used ML (Logistic Regression, XGBoost) and causal inference (DID, PSM) to analyze healthcare-seeking behavior.</p>
+                <a href="https://freecaredashboard-production.up.railway.app/" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Social Media User Profiling Tool</h3>
+                <p><strong>Technologies:</strong> Python,Scikit-learn</p>
+                <p>Developed a real-time profile analysis dashboard with user authentication.</p>
+                <p>Integrated a Random Forest model to classify social media user types based on behavioral features.</p>
+                <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Manufacturing Defect Prediction</h3>
+                <p><strong>Technologies:</strong> Python,Scikit-learn</p>
+                <p>Delivered actionable insights via a Streamlit app to improve production quality.</p>
+                
+                <a href="https://web-production-eb98e.up.railway.app/login" target="_blank">View Project</a>
+            </div>
+        </div>
+
+
+        
+    </section>
+    <section id="Certi" style="display: none;">
+
+        <div class="experience-card">
+            <div id="certs" class="tab-content">
+                <h3>Professional Certifications</h3>
+                <p>Here are the certifications I've earned throughout my academic and professional journey.</p>
+                <div class="cert-grid">
+                    <div class="cert-container">
+                        <h3>Datathon 2024</h3>
+                        <p><strong>Issuing Organization:</strong>DSSG,Berlin</p>
+                        <p><strong>Date:</strong> May 2024</p>
+
+                        <p class="cert-description">Participated in a highly competitive datathon focusing on solving real-world data science problems using machine learning and analytics.</p>
+                        <a class="toggle-link" onclick="toggleTakeaways()">Show Key Takeaways</a>
+                        <div id="keyTakeaways">
+                            <h3>Key Takeaways:</h3>
+                            <ul>
+                                <li>First important point</li>
+                                <li>Second key finding</li>
+                                <li>Third major conclusion</li>
+                            </ul>
+                        </div>
+
+                        <a href="F:\portfoliojm\DSSG Datathon Certificate.png" class="cert-link">View Certificate</a>
+                    </div>
+
+                    <!-- Repeat for each cert -->
+                </div>
+            </div>
+        </div>
+        <div class="experience-card">
+
+            <h3>Research Publications</h3>
+            <ul>
+                <li>
+                    <strong>Title</strong> | Conference/Journal | Year
+                    <a href="#" class="badge">PDF</a>
+                    <a href="#" class="badge">DOI</a>
+                </li>
+                <!-- Repeat for each paper -->
+            </ul>
+        </div>
+    </section>
     
 
-            <div class="project-item">
-                <h3>Manufacturing Defect Prediction</h3>
-                <p>
+    <script>
+        function hideAllSections() {
+            document.getElementById('about1').style.display = 'none';
+            document.getElementById('skillsSection').style.display = 'none';
+            document.getElementById('experience').style.display = 'none';
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById('Certi').style.display = 'none';
+            document.getElementById('Edu').style.display = 'none';
+            document.getElementById('keyTakeaways').style.display = 'none';
+        }
+        function toggleAbout() {
+            hideAllSections();
+            document.getElementById('about1').style.display = 'block';
+        }
+        
+        function toggleeducation() {
+            hideAllSections();
+            document.getElementById('Edu').style.display = 'block';
+        }
+        function toggleSkills() {
+            hideAllSections();
+            document.getElementById('skillsSection').style.display = 'block';
+        }
 
-                    Delivered actionable insights via a Streamlit app to improve production quality.
-                </p>
-                <a href="https://your-defect-prediction-app.com" target="_blank">View Project</a>
-            </div>
-            </section>
-            <section id="Certi" style="display: none;">
-                <section id="about">
-                    <h3>Research Publications</h3>
-                    <ul>
-                        <li>
-                            <strong>Title</strong> | Conference/Journal | Year
-                            <a href="#" class="badge">PDF</a>
-                            <a href="#" class="badge">DOI</a>
-                        </li>
-                        <!-- Repeat for each paper -->
-                    </ul>
-
-                    <div id="certs" class="tab-content">
-                        <h3>Professional Certifications</h3>
-                        <div class="cert-grid">
-                            <div class="cert-card">
-                                <h4>Google Cloud AI Certification</h4>
-                                <p>Issued: 2022 | Credential ID: XYZ123</p>
-                                <a href="#" class="btn-verify">Verify</a>
-                            </div>
-                            <!-- Repeat for each cert -->
-                        </div>
-                    </div>
-                </section>
-            </section>
-
-            <script>
-                function hideAllSections() {
-                    document.getElementById('about1').style.display = 'none';
-                    document.getElementById('skillsSection').style.display = 'none';
-                    document.getElementById('experience').style.display = 'none';
-                    document.getElementById('projects').style.display = 'none';
-                    document.getElementById('Certi').style.display = 'none';
-                }
-                function toggleAbout() {
-                    hideAllSections();
-                    document.getElementById('about1').style.display = 'block';
-                }
-
-                function toggleSkills() {
-                    hideAllSections();
-                    document.getElementById('skillsSection').style.display = 'block';
-                }
-
-                function toggleexperiences() {
-                    hideAllSections();
-                    document.getElementById('experience').style.display = 'block';
-                }
-
-                function toggleprojects() {
-                    hideAllSections();
-                    document.getElementById('projects').style.display = 'block';
-                }
-                function toggleCertifications() {
-                    hideAllSections();
-                    document.getElementById('Certi').style.display = 'block';
-                }
-            </script>
+        function toggleexperiences() {
+            hideAllSections();
+            document.getElementById('experience').style.display = 'block';
+        }
+        function toggleTakeaways() {
+            hideAllSections();
+            const takeaways = document.getElementById('keyTakeaways');
+            if (takeaways.style.display === 'none' || takeaways.style.display === '') {
+                takeaways.style.display = 'block';
+                event.target.textContent = "Hide Key Takeaways"; // Optional: Change link text
+            } else {
+                takeaways.style.display = 'none';
+                event.target.textContent = "Show Key Takeaways"; // Optional: Change link text
+            }
+        }
+        function toggleprojects() {
+            hideAllSections();
+            document.getElementById('projects').style.display = 'block';
+        }
+        function toggleCertifications() {
+            hideAllSections();
+            document.getElementById('Certi').style.display = 'block';
+        }
+    </script>
 </div>
  
 </body>
