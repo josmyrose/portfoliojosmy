@@ -510,16 +510,18 @@
 
                         <p class="cert-description">Participated in a highly competitive datathon focusing on solving real-world data science problems using machine learning and analytics.</p>
                         <a class="toggle-link" onclick="toggleTakeaways()">Show Key Takeaways</a>
-                        <div id="keyTakeaways">
+                        <div id="keyTakeaways" style="display: none;">
                             <h3>Key Takeaways:</h3>
                             <ul>
-                                <li>First important point</li>
-                                <li>Second key finding</li>
-                                <li>Third major conclusion</li>
+                                <li><strong>Problem Solving and Innovation:</strong> Tackled real-world problems using data science techniques.</li>
+                                <li><strong>Methodological Insights:</strong> Learned the strengths and weaknesses of survey and web scraping methods for data collection.</li>
+                                <li><strong>Collaborative Teamwork:</strong> Strengthened communication and teamwork skills under competitive conditions.</li>
+                                <li><strong>Data-Driven Decision Making:</strong> Used demographic data to provide actionable recommendations to DRK.</li>
+                                <li><strong>Improved Data Analysis Skills:</strong> Enhanced technical expertise in data wrangling and analysis with Python and machine learning.</li>
                             </ul>
                         </div>
 
-                        <a href="F:\portfoliojm\DSSG Datathon Certificate.png" class="cert-link">View Certificate</a>
+                        <a href="DSSG Datathon Certificate.png" class="cert-link">View Certificate</a>
                     </div>
 
                     <!-- Repeat for each cert -->
@@ -549,7 +551,7 @@
             document.getElementById('projects').style.display = 'none';
             document.getElementById('Certi').style.display = 'none';
             document.getElementById('Edu').style.display = 'none';
-            document.getElementById('keyTakeaways').style.display = 'none';
+            
         }
         function toggleAbout() {
             hideAllSections();
@@ -571,15 +573,11 @@
         }
         function toggleTakeaways() {
             hideAllSections();
-            const takeaways = document.getElementById('keyTakeaways');
-            if (takeaways.style.display === 'none' || takeaways.style.display === '') {
-                takeaways.style.display = 'block';
-                event.target.textContent = "Hide Key Takeaways"; // Optional: Change link text
-            } else {
-                takeaways.style.display = 'none';
-                event.target.textContent = "Show Key Takeaways"; // Optional: Change link text
-            }
+            
+            document.getElementById('keyTakeaways').style.display = 'block';
+            
         }
+        
         function toggleprojects() {
             hideAllSections();
             document.getElementById('projects').style.display = 'block';
