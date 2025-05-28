@@ -256,7 +256,51 @@
             text-decoration: underline;
             cursor: pointer;
         }
-    
+        /* Section Grid */
+        .cert-grid, .pub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        /* Reusable Card */
+        .cert-card, .pub-card {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-top: 3px solid #4b6cb7;
+        }
+
+            .cert-card:hover, .pub-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .cert-title, .pub-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-bottom: 5px;
+        }
+
+        .cert-org, .pub-authors {
+            font-size: 0.9em;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .cert-links a, .pub-links a {
+            text-decoration: none;
+            color: #007acc;
+            margin-right: 10px;
+        }
+
+            .cert-links a:hover, .pub-links a:hover {
+                text-decoration: underline;
+            }
+
     </style>
 </head>
 <body>
@@ -513,7 +557,7 @@
 
         <div class="experience-card">
             <div id="certs" class="tab-content">
-                <h3>Professional Certifications</h3>
+                <h2>🏆 Certifications</h2>
                 <p>Here are the certifications I've earned throughout my academic and professional journey.</p>
                 <div class="cert-grid">
                     <div class="cert-container">
@@ -543,7 +587,7 @@
         </div>
         <div class="experience-card">
 
-            <h3>Research Publications</h3>
+            <h2>📚 Publications</h2>
             <ul>
                 
                <div style="margin-bottom: 30px;">
